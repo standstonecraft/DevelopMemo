@@ -14,6 +14,7 @@ Windows の場合。
 
 ## push
 
+configure user info before commit
 ```dos
 git config --local user.name [name]
 git config --local user.email [email]
