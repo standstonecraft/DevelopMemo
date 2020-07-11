@@ -46,6 +46,11 @@ B フォルダでは C#を開発するため別の拡張を入れたり専用の
   <kbd>Ctrl</kbd>+<kbd>F</kbd> / <kbd>Ctrl</kbd>+<kbd>H</kbd>
 - 全ファイルから検索
   <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>
+- マルチカーソル
+  とても便利。この記事のアニメーションを見て良さそうだと思ったら試してください
+  [VSCodeのマルチカーソル練習帳 - Qiita](https://qiita.com/TomK/items/3b1f5be07d708d7bd6c5)  
+
+その他よくやる操作はググればショートカットかコマンドか拡張が出てくる（選択文字列を大文字化するとかキャメルケースにするとか）
 
 ## コマンド操作
 

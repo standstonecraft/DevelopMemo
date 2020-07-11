@@ -37,28 +37,25 @@ svn co 目的のフォルダ チェックアウトフォルダ
 
 ### 拡張導入
 
-VS CodeのGUIでも導入可能だが数が多いので一括で導入する
-
-| 目的                               | 拡張 ID                             |
-| ---------------------------------- | ----------------------------------- |
-| カッコを色分けして見やすくする     | 'coenraads.bracket-pair-colorizer'  |
-| .NET Core 開発ツール・デバッグ支援 | 'ms-dotnettools.csharp'             |
-| 日本語化                           | 'ms-ceintl.vscode-language-pack-ja' |
-| SVN を直接使えるようになる         | 'johnstoncode.svn-scm'              |
-| SQL 整形                           | 'adpyke.vscode-sql-formatter'       |
-| SQL Server クライント              | 'ms-mssql.mssql'                    |
+VS Code の GUI でも導入可能だが数が多いので一括で導入する
 
 ```powershell
-$pkgs = (
-    'coenraads.bracket-pair-colorizer',
-    'ms-dotnettools.csharp',
-    'ms-ceintl.vscode-language-pack-ja',
-    'johnstoncode.svn-scm',
-    'adpyke.vscode-sql-formatter',
-    'ms-mssql.mssql'
-);
-$pkgs |
-%{code code --install-extension $_}
+# 日本語化
+code code --install-extension 'ms-ceintl.vscode-language-pack-ja'
+# カッコを色分けして見やすくする
+code code --install-extension 'coenraads.bracket-pair-colorizer'
+# .NET Core 開発ツール・デバッグ支援
+code code --install-extension 'ms-dotnettools.csharp'
+# C# 整形
+code code --install-extension 'leopotam.csharpfixformat'
+# C# コメントドキュメンテーション
+code code --install-extension 'k--kato.docomment'
+# SVN を直接使えるようになる
+code code --install-extension 'johnstoncode.svn-scm'
+# SQL Server クライント
+code code --install-extension 'ms-mssql.mssql'
+# SQL 整形
+code code --install-extension 'adpyke.vscode-sql-formatter'
 
 ```
 
