@@ -19,6 +19,7 @@ choco install vscode -y
 Start-Process PowerShell -verb runas
 # 古いPowerShellを閉じる
 exit
+
 ```
 
 ## SVN チェックアウト
@@ -36,15 +37,25 @@ svn co 目的のフォルダ チェックアウトフォルダ
 
 ### 拡張導入
 
+VS CodeのGUIでも導入可能だが数が多いので一括で導入する
+
+| 目的                               | 拡張 ID                             |
+| ---------------------------------- | ----------------------------------- |
+| カッコを色分けして見やすくする     | 'coenraads.bracket-pair-colorizer'  |
+| .NET Core 開発ツール・デバッグ支援 | 'ms-dotnettools.csharp'             |
+| 日本語化                           | 'ms-ceintl.vscode-language-pack-ja' |
+| SVN を直接使えるようになる         | 'johnstoncode.svn-scm'              |
+| SQL 整形                           | 'adpyke.vscode-sql-formatter'       |
+| SQL Server クライント              | 'ms-mssql.mssql'                    |
+
 ```powershell
-# カッコを色分けして見やすくする 'coenraads.bracket-pair-colorizer'
-# .NET Core 開発ツール・デバッグ支援 'ms-dotnettools.csharp'
-# 日本語化 'ms-ceintl.vscode-language-pack-ja'
 $pkgs = (
     'coenraads.bracket-pair-colorizer',
     'ms-dotnettools.csharp',
     'ms-ceintl.vscode-language-pack-ja',
-    'johnstoncode.svn-scm'
+    'johnstoncode.svn-scm',
+    'adpyke.vscode-sql-formatter',
+    'ms-mssql.mssql'
 );
 $pkgs |
 %{code code --install-extension $_}

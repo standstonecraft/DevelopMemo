@@ -17,12 +17,11 @@ dotnet new console
 
 ## SVN ignore設定
 
-gitignore書式でOK。下記が使える  
-
-[gitignore/VisualStudio.gitignore at master · github/gitignore](https://github.com/github/gitignore/blob/master/VisualStudio.gitignore)
-
-```powershell
-svn propset svn:ignore -RF .\svn-ignore.txt .
+エクスプローラーのプロジェクトフォルダー内のなにもないところで右クリック＞`Tortoise SVN`＞`Properties`＞ <kbd>New</kbd> > `Other`  
+name：svn:global-ignores  
+value：
 ```
+bin
+obj
 
-ファイルを参照し続けるわけではないためどこにあってもOK。GUIでも設定可能
+```

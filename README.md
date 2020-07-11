@@ -11,3 +11,4 @@
 - [まっさらなWin10を仮想マシンで用意する](virtualbox-win10.md)
 - [VS Code を初めて使う人用の説明](vscode.md)
 - [npm よりも Yarn](yarn.md)
+- [使用ソフトウェアのライセンス情報](licenses.md)
