@@ -16,9 +16,6 @@ choco install tortoisesvn -y
 choco install vscode -y
 
 # PowerShell を再起動
-Start-Process PowerShell -verb runas
-# 古いPowerShellを閉じる
-exit
 
 ```
 

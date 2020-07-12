@@ -12,7 +12,7 @@
 choco install yarn
 ```
 
-プロジェクト（フォルダ）で Yarn を有効にする
+プロジェクト(フォルダ)で Yarn を有効にする
 
 ```powershell
 yarn init

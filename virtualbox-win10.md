@@ -1,4 +1,4 @@
-# まっさらなWin10を仮想マシンで用意する
+# まっさらな Win10 を仮想マシンで用意する
 
 [Downloads – Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
@@ -8,15 +8,9 @@
 
 ## 言語
 
-設定＞時刻と言語＞言語
-
-1. 言語の追加 で日本語追加
-1. 再起動
-1. 管理用の言語設定＞管理＞システムロケール＞日本語＞OK＞再起動キャンセル
-1. 日本語＞オプション＞ハードウェア キーボード レイアウト＞レイアウトを変更する＞日本語キーボード
-1. 再起動
-
-## PowerShell
-
-```powershell
-```
+- <kbd>Win</kbd> ＞ <kbd>⚙</kbd> ＞ <kbd>Time & Language</kbd> ＞ <kbd>Language</kbd> > Prefered Language > <kbd>Add a Language</kbd> > `Japanese` > <kbd>Next</kbd>
+- ☑Install Language Pack
+- ☑Set as my Windows display language
+- <kbd>Install</kbd> > <kbd>No, sign out later</kbd>
+- <kbd>Japanese</kbd> > <kbd>Options</kbd> > Hardware keyboard layout > <kbd>Change layout</kbd> > `Japanese keyboard` > <kbd>Restart Now</kbd>
+- <kbd>Win</kbd> ＞ <kbd>⚙</kbd> ＞ <kbd>時刻と言語</kbd> ＞ <kbd>言語</kbd> ＞ <kbd>管理用の言語の設定</kbd> ＞ <kbd>システムロケールの設定</kbd> ＞ `日本語` ＞ <kbd>OK</kbd>
