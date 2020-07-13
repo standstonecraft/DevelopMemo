@@ -1,18 +1,28 @@
-# VS Code での .NET Core プロジェクト作成
+# VS Code での .NET プロジェクト作成
 
 ## 前提
 
 - 必須
   - VS Code での開発
-  - .NET Core インストール済み
+  - .NET Core インストール済み(.NET Frameworkの場合でも)
   - VS Code 拡張 "ms-dotnettools.csharp" インストール済み
+- 任意
+  - .NET Frameworkの場合は目的のバージョンのインストール済み
+
 
 ## 作業
 
 プロジェクト作成
 
+.NET Framework でも開発可能。その場合は`--target-framework-override`オプションを使用する。
+
+下記 `net47` は .NET Framework 4.7 の場合。
+バージョンの表記方法は [Target frameworks in SDK-style projects - .NET | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/standard/frameworks) で確認のこと
+
 ```powershell
-dotnet new console -n ProjectName -o src
+dotnet new console -n ProjectName -lang "c#" -o src
+# .NET Framework 4.7 で開発する場合
+# dotnet new console --target-framework-override net47 -lang c# -n ProjectName -o src
 dotnet new xunit -o test -n ProjectName.Test
 cd test
 dotnet add reference ../src/ProjectName.csproj
@@ -36,11 +46,11 @@ dotnet-project-licenses -i .
 
 ## SVN ignore 設定
 
-エクスプローラーのプロジェクトフォルダー内のなにもないところで右クリック＞ `Tortoise SVN` ＞ `Properties` ＞ <kbd>New</kbd> > `Other`  
+エクスプローラーのプロジェクトフォルダー内のなにもないところで右クリック＞ `Tortoise SVN` ＞ `Properties` ＞ <kbd>New</kbd> > `Other`
 
 ```
 name：
-svn:global-ignores  
+svn:global-ignores
 value：
 bin
 obj
