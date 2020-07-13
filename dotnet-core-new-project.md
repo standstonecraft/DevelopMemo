@@ -14,18 +14,30 @@
 
 プロジェクト作成
 
+### .NET Core
+
+```powershell
+$ProjectName = "SomethingCoolName"
+dotnet new console -n "${ProjectName}" -o src
+dotnet new xunit -o test -n "${ProjectName}.Test"
+cd test
+dotnet add reference ../src/"${ProjectName}.csproj"
+cd ..
+
+```
+
+### .NET Framework
 .NET Framework でも開発可能。その場合は`--target-framework-override`オプションを使用する。
 
 下記 `net47` は .NET Framework 4.7 の場合。
 バージョンの表記方法は [Target frameworks in SDK-style projects - .NET | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/standard/frameworks) で確認のこと
 
 ```powershell
-dotnet new console -n ProjectName -lang "c#" -o src
-# .NET Framework 4.7 で開発する場合
-# dotnet new console --target-framework-override net47 -lang c# -n ProjectName -o src
-dotnet new xunit -o test -n ProjectName.Test
+$ProjectName = "SomethingCoolName"
+dotnet new console --target-framework-override net47 -n "${ProjectName}" -o src
+dotnet new xunit --target-framework-override net47 -o test -n "${ProjectName}.Test"
 cd test
-dotnet add reference ../src/ProjectName.csproj
+dotnet add reference ../src/"${ProjectName}.csproj"
 cd ..
 
 ```
