@@ -15,7 +15,8 @@ Windows の場合。
 
 ## commit する前に
 
-```dos
+```powershell
+# PowerShell
 git config --local user.name [name]
 git config --local user.email [email]
 ```

@@ -9,11 +9,13 @@
 管理者権限 required
 
 ```powershell
+# PowerShell
 choco install yarn
 ```
 
 プロジェクト(フォルダ)で Yarn を有効にする
 
 ```powershell
+# PowerShell
 yarn init
 ```

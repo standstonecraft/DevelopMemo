@@ -4,11 +4,10 @@
 
 - 必須
   - VS Code での開発
-  - .NET Core インストール済み(.NET Frameworkの場合でも)
+  - .NET Core インストール済み(.NET Framework の場合でも)
   - VS Code 拡張 "ms-dotnettools.csharp" インストール済み
 - 任意
-  - .NET Frameworkの場合は目的のバージョンのインストール済み
-
+  - .NET Framework の場合は目的のバージョンのインストール済み
 
 ## 作業
 
@@ -17,6 +16,7 @@
 ### .NET Core
 
 ```powershell
+# PowerShell
 $ProjectName = "SomethingCoolName"
 dotnet new console -n "${ProjectName}" -o src
 dotnet new xunit -o test -n "${ProjectName}.Test"
@@ -27,12 +27,14 @@ cd ..
 ```
 
 ### .NET Framework
+
 .NET Framework でも開発可能。その場合は`--target-framework-override`オプションを使用する。
 
 下記 `net47` は .NET Framework 4.7 の場合。
 バージョンの表記方法は [Target frameworks in SDK-style projects - .NET | Microsoft Docs](https://docs.microsoft.com/en-us/dotnet/standard/frameworks) で確認のこと
 
 ```powershell
+# PowerShell
 $ProjectName = "SomethingCoolName"
 dotnet new console --target-framework-override net47 -n "${ProjectName}" -o src
 dotnet new xunit --target-framework-override net47 -o test -n "${ProjectName}.Test"
@@ -47,12 +49,14 @@ cd ..
 ライブラリのライセンスを一括出力する方法
 
 ```powershell
+# PowerShell
 dotnet tool install --global dotnet-project-licenses
 ```
 
 出力方法
 
 ```powershell
+# PowerShell
 dotnet-project-licenses -i .
 ```
 

@@ -3,6 +3,7 @@
 下記ソフトを導入する(Chocolatey が入っていないなら自力で入れる)
 
 ```powershell
+# PowerShell
 # 管理者権限で実行
 # ファイル比較・マージソフト
 choco install winmerge
@@ -10,4 +11,4 @@ choco install winmerge
 choco install 7zip
 ```
 
-あとは タイムスタンプ-ユーザーID-コメント.zip などで管理してください知りません
+あとは タイムスタンプ-ユーザー ID-コメント.zip などで管理してください知りません

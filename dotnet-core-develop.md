@@ -7,6 +7,7 @@
 PowerShell を管理者権限で起動
 
 ```powershell
+# PowerShell
 # アプリインストール
 # .NET Core SDK
 choco install dotnetcore-sdk -y
@@ -24,6 +25,7 @@ choco install vscode -y
 ## SVN チェックアウト
 
 ```powershell
+# PowerShell
 # チェックアウトするフォルダがなければ作る
 New-Item c:\SVN\ProjectName -ItemType Directory -ErrorAction Ignore
 # チェックアウト
@@ -39,6 +41,7 @@ svn co 目的のフォルダ チェックアウトフォルダ
 VS Code の GUI でも導入可能だが数が多いので一括で導入する
 
 ```powershell
+# PowerShell
 # 日本語化
 code code --install-extension 'ms-ceintl.vscode-language-pack-ja'
 # カッコを色分けして見やすくする
