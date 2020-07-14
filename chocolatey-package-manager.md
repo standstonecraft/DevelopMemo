@@ -44,7 +44,7 @@ Start-Process powershell
 exit
 ```
 
-##　インストール結果確認
+## インストール結果確認
 
 ```powershell
 # PowerShell(管理者権限)
