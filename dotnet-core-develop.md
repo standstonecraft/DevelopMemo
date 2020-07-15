@@ -11,8 +11,8 @@ PowerShell を管理者権限で起動
 # アプリインストール
 # .NET Core SDK
 choco install dotnetcore-sdk -y
-# .NET Frameworkの場合はそれも
-choco install dotnet4.7 -y
+# .NET Frameworkの場合はこれも
+choco install netfx-4.7-devpack -y
 # SVN(入れる場合)
 choco install tortoisesvn -y
 # VS Code (エディタ)
