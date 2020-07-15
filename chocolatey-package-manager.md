@@ -21,6 +21,8 @@ Get-Content $PROFILE
 # ファイルがなかったり下記の内容がなかったらプロキシ設定を追記しておく
 # これはユーザーごとの設定なので、実行したユーザーにしか効果がない
 # xxx.xxx.xxx = プロキシサーバー
+$pro0 = ($PROFILE -split ";")[0]
+if(-Not (Test-Path $pro0)){New-Item $pro0 -ItemType File -Force}
 '[System.Net.WebRequest]::DefaultWebProxy = New-Object System.Net.WebProxy "xxx.xxx.xxx.xxx:8080", $True' >> $profile
 
 # PowerShellの新しいプロセスを管理者権限で立ち上げる
