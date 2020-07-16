@@ -60,17 +60,4 @@ dotnet tool install --global dotnet-project-licenses
 dotnet-project-licenses -i .
 ```
 
-## SVN ignore 設定
-
-エクスプローラーのプロジェクトフォルダー内のなにもないところで右クリック＞ `Tortoise SVN` ＞ `Properties` ＞ <kbd>New</kbd> > `Other`
-
-```
-name：
-svn:global-ignores
-value：
-bin
-obj
-
-```
-
 [visual studio 2010 - How to generate model from database using Dapper? - Stack Overflow](https://stackoverflow.com/questions/11056141/how-to-generate-model-from-database-using-dapper)

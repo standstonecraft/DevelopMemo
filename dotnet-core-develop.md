@@ -22,18 +22,6 @@ choco install vscode -y
 
 ```
 
-## SVN チェックアウト
-
-```powershell
-# PowerShell
-# チェックアウトするフォルダがなければ作る
-New-Item c:\SVN\ProjectName -ItemType Directory -ErrorAction Ignore
-# チェックアウト
-svn co 目的のフォルダ チェックアウトフォルダ
-# 例
-# svn co file:///C:/SVNHost/ProjectName c:\SVN\ProjectName
-```
-
 ## VS Code
 
 ### 拡張導入
