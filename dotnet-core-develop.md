@@ -17,7 +17,8 @@ choco install netfx-4.7-devpack -y
 choco install tortoisesvn -y
 # VS Code (エディタ)
 choco install vscode -y
-
+# C# ドキュメント生成ツール
+choco install doxygen.install -y
 # PowerShell を再起動
 
 ```
@@ -40,8 +41,6 @@ code code --install-extension 'ms-dotnettools.csharp'
 code code --install-extension 'leopotam.csharpfixformat'
 # C# コメントドキュメンテーション
 code code --install-extension 'k--kato.docomment'
-# SVN を直接使えるようになる
-code code --install-extension 'johnstoncode.svn-scm'
 # SQL Server クライント
 code code --install-extension 'ms-mssql.mssql'
 # SQL 整形
