@@ -55,6 +55,7 @@ code --install-extension 'sandcastle.vscode-open'
 code --install-extension 'johnstoncode.svn-scm'
 # PowerShell 統合(任意)
 code --install-extension 'ms-vscode.powershell'
+
 ```
 
 使い方は [vscode.md](vscode.md)
