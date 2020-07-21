@@ -12,6 +12,7 @@ $body | Out-File -FilePath README.md -Encoding utf8
 
 Get-ChildItem -Filter *.md |
 Where-Object { $_.Name -ne "README.md" } |
+Sort-Object -Property Name |
 ForEach-Object {
     $title = Get-Content $_ -Encoding UTF8 | Select-Object -First 1
     $title = $title.SubString(2)

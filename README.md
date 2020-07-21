@@ -4,8 +4,8 @@
 
 日本語で書くけど打つのがめんどくさいときはエセ英語で書いても可
 
-- [VS Code での .NET コンソールアプリ開発](choco-dotnet-console-develop.md)
 - [Chocolatey(パッケージ管理)](chocolatey-package-manager.md)
+- [VS Code での .NET コンソールアプリ開発](dotnet-console-develop.md)
 - [VS Code での .NET プロジェクト作成](dotnet-core-new-project.md)
 - [VS Code で Git を使う](git-and-vscode.md)
 - [自力でバージョン管理](legacy-version-control.md)
