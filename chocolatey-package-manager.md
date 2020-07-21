@@ -3,40 +3,38 @@
 ## 概要
 
 Windows アプリを GUI でなくコマンドラインでインストール・管理できるツール
-全部 GUI でやるならインストール不要
-
-**Chocolatey でのインストール作業は常に管理者権限で行うこと**
+全部 GUI で手動でやるならインストール不要
 
 ## 導入
 
-### プロキシが設定されている場合
+### web に到達できるか確かめる
 
-PowerShell から web にリクエストするとき用のプロキシ設定を行う
+PowerShell から web にリクエストできないとき、下記のプロキシ設定を行う
 
 ```powershell
-# PowerShell(管理者権限)
-# PowerShell起動時に自動で実行されるスクリプトの中身確認
-Get-Content $PROFILE
-
-# ファイルがなかったり下記の内容がなかったらプロキシ設定を追記しておく
-# これはユーザーごとの設定なので、実行したユーザーにしか効果がない
-# xxx.xxx.xxx.xxx = プロキシサーバー
-$pro0 = ($PROFILE -split ";")[0]
-if(-Not (Test-Path $pro0)){New-Item $pro0 -ItemType File -Force}
-'[System.Net.WebRequest]::DefaultWebProxy = New-Object System.Net.WebProxy "xxx.xxx.xxx.xxx:8080", $True' >> $pro0
-
-# PowerShellの新しいプロセスを管理者権限で立ち上げる
-Start-Process powershell;exit
+# リクエストできるか確かめる
+(New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')
 
 ```
+
+下記のように出力されれば OK
+
+```
+# =====================================================================
+# Copyright 2017 - 2020 Chocolatey Software, Inc, and the
+:
+:
+```
+
+「サーバーに到達できません」と出たときはプロキシ設定が必要と思われる
 
 ### Chocolatey をインストールする
 
 ```powershell
 # PowerShell(管理者権限)
-Windows PowerShell
-Copyright (C) Microsoft Corporation. All rights reserved.
-
+# 必要な場合はプロキシ設定
+[System.Net.WebRequest]::DefaultWebProxy = New-Object System.Net.WebProxy "xxx.xxx.xxx.xxx:yyyy", $True
+# インストール
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 # 1行目がすぐに出てこなければ通信エラー
 # Getting latest version of the Chocolatey package for download.
@@ -49,41 +47,24 @@ Start-Process powershell;exit
 ## インストール結果確認
 
 ```powershell
-# PowerShell(管理者権限)
+# PowerShell
 choco
 # 下記のような出力があればOK
 # Chocolatey v0.10.15
 # Please run 'choco -?' or 'choco <command> -?' for help menu.
 ```
 
-### プロキシが設定されている場合の Chocolatey の設定
+## プロキシが設定されている場合の Chocolatey の設定
 
 ```powershell
-# PowerShell(管理者権限)
-# 設定ファイルを開く
-notepad $env:ChocolateyInstall\config\chocolatey.config
-```
-
-下記のように書き換えて閉じる
-
-```xml
-<add key="proxy" value="" description="Explicit proxy location. Available in 0.9.9.9+." />
-```
-
-↓
-
-```xml
-<add key="proxy" value="xxx.xxx.xxx.xxx:8080" description="Explicit proxy location. Available in 0.9.9.9+." />
-```
-
-```powershell
-# PowerShell(管理者権限)
+# PowerShell
+choco config set proxy "xxx.xxx.xxx.xxx:yyyy"
 # PowerShellの新しいプロセスを管理者権限で立ち上げる
 Start-Process powershell;exit
 
 ```
 
-### 動作確認
+## 動作確認
 
 ```powershell
 # PowerShell(管理者権限)
