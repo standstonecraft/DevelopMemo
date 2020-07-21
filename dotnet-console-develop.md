@@ -17,6 +17,18 @@ cinst dotnet-console-develop-choco.config --log-file=installResult.txt -y
 
 VS Code の GUI でも導入可能だが数が多いので一括で導入する
 
+#### プロキシ設定が必要な場合
+
+- VS Code を起動
+- <kbd>F1</kbd> '>Open Settings (JSON)`
+- 最初の開きカッコの直後に追加
+  ```
+  "http.proxy": "xxx.xxx.xxx.xxx:yyyy",
+  "http.proxyStrictSSL": false,
+  ```
+
+#### 導入
+
 ```powershell
 # PowerShell
 # 日本語化
