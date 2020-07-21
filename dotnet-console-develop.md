@@ -2,12 +2,12 @@
 
 ## ソフトウェア導入
 
-前提：chocolatey 導入済み(そうでない場合は`choco-dotnet-console-develop.config`で必要なソフトを確認して全手順自分でやってください)
+前提：chocolatey 導入済み(そうでない場合は`dotnet-console-develop-choco.config`で必要なソフトを確認して全手順自分でやってください)
 
 ```powershell
 # PowerShell(管理者権限で起動)
 # 不要なソフトはコメントアウトするか消してから実行
-cinst choco-dotnet-console-develop.config --log-file=installResult.txt -y
+cinst dotnet-console-develop-choco.config --log-file=installResult.txt -y
 
 ```
 
