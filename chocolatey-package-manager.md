@@ -20,14 +20,14 @@ Get-Content $PROFILE
 
 # ファイルがなかったり下記の内容がなかったらプロキシ設定を追記しておく
 # これはユーザーごとの設定なので、実行したユーザーにしか効果がない
-# xxx.xxx.xxx = プロキシサーバー
+# xxx.xxx.xxx.xxx = プロキシサーバー
 $pro0 = ($PROFILE -split ";")[0]
 if(-Not (Test-Path $pro0)){New-Item $pro0 -ItemType File -Force}
-'[System.Net.WebRequest]::DefaultWebProxy = New-Object System.Net.WebProxy "xxx.xxx.xxx.xxx:8080", $True' >> $profile
+'[System.Net.WebRequest]::DefaultWebProxy = New-Object System.Net.WebProxy "xxx.xxx.xxx.xxx:8080", $True' >> $pro0
 
 # PowerShellの新しいプロセスを管理者権限で立ち上げる
-Start-Process powershell
-exit
+Start-Process powershell;exit
+
 ```
 
 ### Chocolatey をインストールする
@@ -42,8 +42,8 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 # Getting latest version of the Chocolatey package for download.
 
 # PowerShellの新しいプロセスを管理者権限で立ち上げる
-Start-Process powershell
-exit
+Start-Process powershell;exit
+
 ```
 
 ## インストール結果確認
@@ -79,8 +79,8 @@ notepad $env:ChocolateyInstall\config\chocolatey.config
 ```powershell
 # PowerShell(管理者権限)
 # PowerShellの新しいプロセスを管理者権限で立ち上げる
-Start-Process powershell
-exit
+Start-Process powershell;exit
+
 ```
 
 ### 動作確認
