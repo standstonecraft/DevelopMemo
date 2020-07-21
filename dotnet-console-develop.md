@@ -33,8 +33,6 @@ VS Code の GUI でも導入可能だが数が多いので一括で導入する
 # PowerShell
 # 日本語化
 code code --install-extension 'ms-ceintl.vscode-language-pack-ja'
-# カッコを色分けして見やすくする
-code code --install-extension 'coenraads.bracket-pair-colorizer'
 # .NET Core 開発ツール・デバッグ支援
 code code --install-extension 'ms-dotnettools.csharp'
 # C# 整形
@@ -45,7 +43,18 @@ code code --install-extension 'k--kato.docomment'
 code code --install-extension 'ms-mssql.mssql'
 # SQL 整形
 code code --install-extension 'adpyke.vscode-sql-formatter'
-
+# XML 整形
+code --install-extension 'dotjoshjohnson.xml'
+# JSON ソート
+code --install-extension 'richie5um2.vscode-sort-json'
+# カッコを色分けして見やすくする
+code code --install-extension 'coenraads.bracket-pair-colorizer'
+# ファイルをデフォルトアプリで開く
+code --install-extension 'sandcastle.vscode-open'
+# SVN (入れる場合)
+code --install-extension 'johnstoncode.svn-scm'
+# PowerShell 統合(任意)
+code --install-extension 'ms-vscode.powershell'
 ```
 
 使い方は [vscode.md](vscode.md)
