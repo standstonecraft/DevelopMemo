@@ -37,6 +37,8 @@ code code --install-extension 'ms-ceintl.vscode-language-pack-ja'
 code code --install-extension 'ms-dotnettools.csharp'
 # C# 整形
 code code --install-extension 'leopotam.csharpfixformat'
+# C# using オートコンプリート
+code code --install-extension 'fudge.auto-using'
 # C# コメントドキュメンテーション
 code code --install-extension 'k--kato.docomment'
 # SQL Server クライント
