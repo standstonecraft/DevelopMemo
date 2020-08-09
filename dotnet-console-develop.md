@@ -35,8 +35,6 @@ VS Code の GUI でも導入可能だが数が多いので一括で導入する
 code code --install-extension 'ms-ceintl.vscode-language-pack-ja'
 # .NET Core 開発ツール・デバッグ支援
 code code --install-extension 'ms-dotnettools.csharp'
-# C# 整形
-code code --install-extension 'leopotam.csharpfixformat'
 # C# using オートコンプリート
 code code --install-extension 'fudge.auto-using'
 # C# コメントドキュメンテーション
@@ -61,3 +59,24 @@ code --install-extension 'ms-vscode.powershell'
 ```
 
 使い方は [vscode.md](vscode.md)
+
+editorconfig を Omnisharp に実行させる場合は、`%USERPROFILE%\.omnisharp`
+に下記のファイルを配置する。またここで Omnisharp 用の設定も記述する。
+
+omnisharp.json
+
+```json
+{
+  "$desc": [
+    "設定項目はこちらを参照",
+    "https://github.com/OmniSharp/omnisharp-roslyn/wiki/Configuration-Options"
+  ],
+  "RoslynExtensionsOptions": {
+    "enableAnalyzersSupport": true
+  },
+  "FormattingOptions": {
+    "enableEditorConfigSupport": true,
+    "OrganizeImports": true
+  }
+}
+```
